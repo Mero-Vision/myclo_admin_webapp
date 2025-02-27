@@ -1,0 +1,156 @@
+.drawerClose {
+   /* padding-inline: 10px; */
+   padding-right: 5px;
+}
+.drawerOpen {
+   /* padding-inline: 10px; */
+   padding-right: 10px;
+}
+
+.companyName {
+   padding: 15px 20px;
+   display: flex;
+   column-gap: 10px;
+   align-items: center;
+   background: #fff;
+   position: fixed;
+   bottom: 0;
+   border-radius: 0 5px 0 5px;
+   box-shadow: -9px -2px 19px 0px rgba(39, 94, 235, 0.3);
+}
+.companyName img {
+   border-radius: 50%;
+   height: 30px;
+   width: 30px;
+   object-fit: cover;
+}
+
+.drawerHeader {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   column-gap: 7px;
+   width: 100%;
+}
+.drawerHeader img {
+   height: 35px;
+   width: 35px;
+   object-fit: contain;
+}
+
+.drawerContent {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding-block: 0.8rem;
+}
+
+.nav a {
+   color: #6259ca;
+   text-decoration: none;
+}
+
+.activeClass {
+   color: #fff !important;
+   border-radius: 50px;
+}
+.activeClass > * {
+   background: #6259ca !important;
+   border-radius: 0px 50px 50px 0px !important;
+}
+.activeClass .MuiTypography-root {
+   font-weight: 600;
+   font-size: 13px;
+}
+
+.activeChildClass {
+   transition: all 1s ease-in-out;
+   color: #6259ca !important;
+   background: #efeffd !important;
+   border-radius: 5px !important;
+   font-weight: bolder !important;
+   position: relative;
+}
+
+.activeChildClass .MuiTypography-root {
+   color: #6259ca !important;
+   font-weight: 600 !important;
+}
+.activeChildClass::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: -8px;
+   width: 9px;
+   height: 1px;
+   background: #e5e5eb;
+   z-index: -1;
+}
+.activeChildClass .MuiTypography-root {
+   font-weight: 600 !important;
+   font-size: 13px;
+}
+.nonActiveChildClass .MuiTypography-root {
+   font-weight: 600 !important;
+   font-size: 13px;
+}
+
+.listItemButton {
+   justify-content: initial;
+   padding-inline: 10px !important;
+   padding-block: 5px !important;
+   font-size: 13px;
+}
+
+.listItemButtonChild {
+   justify-content: initial;
+   padding-inline: 6px !important;
+   padding-block: 0px !important;
+   display: flex;
+   column-gap: 5px;
+   border-radius: 5px !important;
+   font-size: 13px;
+}
+.listItemButtonChild svg {
+   font-size: small;
+}
+
+.childContainer {
+   width: max-content;
+   padding-top: 6px;
+   border-left: 1px solid #e5e5eb;
+   margin-inline: 42px;
+   padding-inline: 8px;
+}
+.childContainer button {
+   padding: 3px !important;
+}
+
+.iconButton {
+   border-radius: 0 !important;
+}
+.iconButton:hover {
+   color: gray !important;
+   background: gray !important;
+}
+
+.addAllContainer {
+   display: flex;
+   column-gap: 3rem;
+   padding: 1rem;
+   min-width: 600px;
+}
+.addAllContainer button {
+   color: gray;
+}
+.addAllContainer button:hover svg {
+   transition: 200ms all ease-in-out;
+   color: gray;
+}
+
+.title {
+   text-transform: uppercase;
+   margin-bottom: 1rem;
+   margin-left: 0.5rem;
+}

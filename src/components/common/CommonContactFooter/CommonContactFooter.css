@@ -1,0 +1,185 @@
+.cardComponentPricingContact {
+   /* padding: 4rem 6rem; */
+   background-color: #fff4f1;
+}
+
+.leftBox {
+   padding: 4rem 0rem;
+   padding-left: 6rem;
+}
+
+.leftBoxTitle {
+   color: #424242;
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 55px;
+   margin-bottom: 20px;
+   border-left: 4px solid #ff7a5c;
+   padding-left: 30px;
+}
+
+.leftBoxSubtitle {
+   color: #777777;
+   font-size: 18px;
+   font-weight: 600;
+   padding-left: 30px;
+   border-left: 4px solid #fff4f1;
+}
+
+.rightBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100%;
+   padding: 4rem 0rem;
+   padding-right: 6rem;
+
+   padding-left: 8rem;
+}
+
+.rightBoxGrid {
+   background-image: url("../../../assets/nepalMap.png");
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.rightBoxGrid::before {
+   content: ""; /* Required for pseudo-element */
+   position: absolute; /* Position it absolutely within the rightBox */
+   top: 0; /* Align it to the top */
+   left: 0; /* Align it to the left */
+   width: 100%; /* Full width of the parent */
+   height: 100%; /* Full height of the parent */
+   background-image: url("../../../assets/nepalMap.png");
+   background-size: cover; /* Adjusts the background image to cover the entire element */
+   background-position: center; /* Centers the background image */
+   background-repeat: no-repeat; /* Prevents the background image from repeating */
+   opacity: 0.1 !important; /* Adjust opacity (0 is fully transparent, 1 is fully opaque) */
+   z-index: -1; /* Places the image behind the content */
+}
+
+/* .mapBox {
+   position: absolute;
+   z-index: 10 !important;
+   top: 0;
+   left: 0;
+} */
+
+.rightBoxTitle {
+   color: #424242;
+   font-size: 14px;
+   font-weight: 600;
+   letter-spacing: 4px;
+   margin-bottom: 2px;
+   text-transform: uppercase;
+}
+
+.rightBoxNumber {
+   color: #ff7a5c;
+   font-size: 32px;
+   font-weight: 700;
+   letter-spacing: 4px;
+   margin-bottom: 2px;
+}
+
+.rightBoxButton {
+   border: 2px solid #ff7a5c !important;
+   background-color: #ff7a5c !important;
+   color: #fff !important;
+   border-radius: 50px !important;
+   padding: 10px 20px !important;
+}
+.rightBoxButton:hover {
+   background-color: #fff4f1 !important;
+   border: 2px solid #ff7a5c !important;
+
+   color: #ff7a5c !important;
+   border-radius: 50px !important;
+   padding: 10px 20px !important;
+}
+
+@media screen and (max-width: 1100px) {
+   /* .cardComponentPricingContact {
+      padding-bottom: 2rem;
+   } */
+   .leftBox {
+      padding: 4rem 0rem;
+      padding-left: 4rem;
+   }
+   .rightBox {
+      padding: 4rem 0rem;
+      padding-right: 4rem;
+      padding-left: 4rem;
+   }
+
+   .leftBoxTitle {
+      color: #424242;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 55px;
+      margin-bottom: 20px;
+      border-left: 4px solid #ff7a5c;
+      padding-left: 30px;
+   }
+
+   .leftBoxSubtitle {
+      color: #777777;
+      font-size: 14px;
+      font-weight: 600;
+      padding-left: 30px;
+      margin-bottom: 20px;
+      border-left: 4px solid #f8f8f8;
+   }
+}
+
+@media screen and (max-width: 718px) {
+   .cardComponentPricingContact {
+      padding-bottom: 2rem;
+   }
+   .rightBoxTitle {
+      color: #424242;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+   }
+   .leftBox {
+      padding: 2rem 0rem;
+      padding-left: 2rem;
+   }
+   .rightBox {
+      padding: 2rem 0rem;
+      padding-right: 2rem;
+      padding-left: 2rem;
+   }
+
+   .rightBoxNumber {
+      color: #ff7a5c;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 2px;
+   }
+   .leftBoxTitle {
+      color: #424242;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 42px !important;
+      margin-bottom: 20px;
+      border-left: 4px solid #ff7a5c;
+      padding-left: 30px;
+   }
+
+   .leftBoxSubtitle {
+      color: #777777;
+      font-size: 12px;
+      font-weight: 600;
+      padding-left: 30px;
+      margin-bottom: 20px;
+      border-left: 4px solid #f8f8f8;
+   }
+}

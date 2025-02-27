@@ -1,0 +1,149 @@
+.root {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: 2rem;
+   /* margin-block: 10px; */
+   padding: 14px 0px;
+}
+
+.root .MuiButton-root {
+   color: gray;
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+}
+
+.main {
+   display: flex;
+   font-size: 16px;
+   font-weight: 600;
+   color: #3f3b3b;
+   text-transform: capitalize;
+}
+
+.right {
+   display: flex;
+   align-items: center;
+   column-gap: 1rem;
+}
+
+.right .companyDiv {
+   background: #fff;
+   padding: 0px 13px;
+   border-radius: 5px;
+   border: 1px solid #d1d1db;
+}
+
+.right .login {
+   font-size: 9px;
+   color: #6c6b80;
+   margin-bottom: 2px;
+}
+
+.right .company {
+   display: flex;
+   align-items: center;
+   column-gap: 4px;
+}
+
+.right .name {
+   font-weight: 500;
+   font-size: 13px;
+}
+
+.breadcrumbs {
+   font-size: 12px;
+}
+
+.navLinkWrapper {
+   display: flex;
+   height: 100%;
+   row-gap: 0.5rem;
+   align-items: center;
+   flex-wrap: wrap;
+   padding: 10px 0px;
+}
+
+.navLinkWrapper > a {
+   color: gray;
+   text-decoration: none;
+   border-right: 2px solid #48484860;
+   padding: 0px 10px;
+}
+
+.navLinkWrapper > a:last-child {
+   border-right: none;
+}
+
+.navLinkWrapper > a > p {
+   font-size: 12px;
+   font-weight: 800;
+}
+
+.active {
+   color: gray !important;
+}
+
+.othersWrapper {
+   padding: 0px;
+   margin: 0px;
+}
+
+.othersWrapper > a {
+   color: gray;
+   text-decoration: none;
+}
+
+.othersWrapper > a > p {
+   font-size: gray;
+   font-weight: 800;
+}
+
+.profileNameBox {
+   display: flex;
+   flex-direction: column;
+}
+
+.profileName {
+   font-size: 13px !important;
+   font-weight: 600 !important;
+   color: #3f3b3b !important;
+   text-align: start;
+   user-select: none !important;
+}
+.profileRole {
+   font-size: 12px !important;
+   font-weight: 600 !important;
+   color: #6158ca !important;
+   text-transform: capitalize;
+   text-align: start;
+   user-select: none !important;
+}
+
+.downArrow {
+   font-size: 22px !important;
+   color: #797979 !important;
+   margin-left: 5px;
+}
+
+@media screen and (max-width: 900px) {
+   .root {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      align-items: flex-end;
+      column-gap: 2rem;
+      /* margin-block: 10px; */
+      padding: 14px 0px;
+   }
+   .header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+   }
+}
