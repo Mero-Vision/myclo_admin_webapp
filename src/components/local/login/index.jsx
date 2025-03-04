@@ -249,21 +249,6 @@ const LoginForm = () => {
                   © Copyright 2024 © All Right Reserved.
                   {/* Developed by{" "} */}
                </Box>
-               {/* <Box
-                  onClick={() =>
-                     window.open("https://merovision.com/")
-                  }
-                  sx={{
-                     marginLeft: "4px",
-                     color: "#6259CA",
-                     "&:hover": {
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                     },
-                  }}
-               >
-                  Mero Vision Pvt. Ltd.
-               </Box> */}
             </Box>
          </Box>
       </form>

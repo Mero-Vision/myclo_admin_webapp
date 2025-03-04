@@ -16,7 +16,6 @@ import { styled, useTheme } from "@mui/material/styles";
 import * as React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/logo.png";
 import { SidebarConstants } from "../../constants/SidebarConstants";
 import "./styles.css";
 
@@ -155,38 +154,34 @@ export default function Sidebar() {
                                     justifyContent: "center",
                                  }}
                               >
-                                 <img src={Logo} alt="Logo" />
+                                 {/* <img src={Logo} alt="Logo" /> */}
+                                 <Typography
+                                    fontWeight={600}
+                                    fontSize={"medium"}
+                                    sx={{ lineHeight: 1 }}
+                                 >
+                                    MyClo
+                                 </Typography>
                               </Box>
                            )}
                            {open && (
                               <>
-                                 <Box
+                                 {/* <Box
                                     sx={{
                                        display: "flex",
                                        justifyContent: "center",
                                     }}
                                  >
                                     <img src={Logo} alt="Logo" />
-                                 </Box>
+                                 </Box> */}
 
                                  <Box>
-                                    <Typography
-                                       sx={{
-                                          lineHeight: 1,
-                                          fontSize: "10px",
-                                          fontWeight: "500",
-                                          marginBottom: "2px",
-                                          color: "#808080",
-                                       }}
-                                    >
-                                       Powered By
-                                    </Typography>
                                     <Typography
                                        fontWeight={600}
                                        fontSize={"medium"}
                                        sx={{ lineHeight: 1 }}
                                     >
-                                       Mero Vision
+                                       MyClo
                                     </Typography>
                                     {/* <Typography
                                        fontWeight={500}
