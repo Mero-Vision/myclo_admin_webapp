@@ -1,6 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { EditOutlined } from "@mui/icons-material";
-import { Avatar, Box, Button, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,8 +12,6 @@ import {
 } from "../../../../../../api/userApi";
 import Logo from "../../../../../../assets/noImgAvatar.png";
 import { getSiteDetail } from "../../../../../../utils/helpers";
-import CustomButton from "../../../../../common/CustomButton/CustomButton";
-import { CustomInputDefault } from "../../../../../common/CustomInputs/CustomInputDefault";
 import CustomLoaderLin from "../../../../../common/CustomLoader/CustomLoaderLin";
 import CustomPaper from "../../../../../common/CustomPaper/CustomPaper";
 import styles from "./styles";
@@ -119,27 +116,27 @@ const UserProfile = () => {
          {" "}
          <CustomPaper
             modalTitle={"User Profile"}
-            button={
-               <Button
-                  sx={{
-                     border: "1px solid #6259CA",
-                     color: "#6259CA",
-                     fontSize: "13px !important",
-                     fontWeight: "500 !important",
-                     textTransform: "capitalize",
-                     // padding: "6px 8px !important",
-                  }}
-                  startIcon={
-                     <EditOutlined
-                        sx={{ fontSize: "18px !important" }}
-                     />
-                  }
-                  variant="outlinedButton"
-                  onClick={() => navigate("edit")}
-               >
-                  Edit Profile
-               </Button>
-            }
+            // button={
+            //    <Button
+            //       sx={{
+            //          border: "1px solid #6259CA",
+            //          color: "#6259CA",
+            //          fontSize: "13px !important",
+            //          fontWeight: "500 !important",
+            //          textTransform: "capitalize",
+            //          // padding: "6px 8px !important",
+            //       }}
+            //       startIcon={
+            //          <EditOutlined
+            //             sx={{ fontSize: "18px !important" }}
+            //          />
+            //       }
+            //       variant="outlinedButton"
+            //       onClick={() => navigate("edit")}
+            //    >
+            //       Edit Profile
+            //    </Button>
+            // }
          >
             {isFetching ? (
                <CustomLoaderLin />
@@ -178,7 +175,7 @@ const UserProfile = () => {
                </Box>
             )}
          </CustomPaper>
-         <CustomPaper modalTitle={"Change Password"}>
+         {/* <CustomPaper modalTitle={"Change Password"}>
             <Box display={"flex"} columnGap={"45px"} mb={"2rem"}>
                <Grid container spacing={0}>
                   <Grid item sm={1.4}></Grid>
@@ -234,7 +231,7 @@ const UserProfile = () => {
                   </Grid>
                </Grid>
             </Box>
-         </CustomPaper>
+         </CustomPaper> */}
       </Box>
    );
 };

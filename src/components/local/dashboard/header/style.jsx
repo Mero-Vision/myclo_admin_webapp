@@ -3,17 +3,23 @@ import { makeStyles } from "@mui/styles";
 const styles = makeStyles((theme) => ({
    gridOneCard: {
       display: "flex",
-      alignItems: "center",
+      flexDirection: " column",
+      // alignItems: "center",
       backgroundColor: "#fff",
-      borderRadius: "8px",
-      padding: "15px 17px",
-      justifyContent: "space-between",
-      boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+      borderRadius: "16px",
+      padding: "24px",
+      // justifyContent: "space-between",
+      // boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+      boxShadow:
+         "rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px",
    },
+
    gridOneCardIcon: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      height: "100%",
+      paddingBottom: "3px",
    },
    gridOneCardIconMain: {
       color: "#fff",
@@ -24,15 +30,15 @@ const styles = makeStyles((theme) => ({
       flexDirection: "column",
    },
    gridOneCardTitle: {
-      fontSize: "13px",
-      fontWeight: "400",
+      fontSize: "14px",
+      fontWeight: "700",
       color: "#2b2b2b",
       marginBottom: "2px",
    },
    gridOneCardAmount: {
-      fontSize: "20px",
-      fontWeight: "500",
-      color: "#2b2b2b",
+      fontSize: "32px",
+      fontWeight: "800 !important",
+      color: "#000",
    },
 
    //student ap
@@ -101,12 +107,14 @@ const styles = makeStyles((theme) => ({
    // chart
 
    singleCard: {
-      borderRadius: "8px",
+      borderRadius: "16px",
       background: "#fff",
       padding: "20px 25px 5px 25px",
       display: "flex",
       height: "100%",
-      boxShadow: "0px 4px 5px 0px rgba(88, 144, 255, 0.07)",
+      boxShadow:
+         "rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px",
+      // boxShadow: "0px 4px 5px 0px rgba(88, 144, 255, 0.07)",
       flexDirection: "column",
       rowGap: "10px",
    },
@@ -122,8 +130,8 @@ const styles = makeStyles((theme) => ({
          gap: "2px",
          "& .titleHeader": {
             color: "#383751",
-            fontSize: "15px",
-            fontWeight: "500",
+            fontSize: "16px",
+            fontWeight: "600",
          },
          "& .amount": {
             color: "#383751",

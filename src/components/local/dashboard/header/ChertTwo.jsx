@@ -4,29 +4,35 @@ import ReactApexChart from "react-apexcharts";
 import { useForm } from "react-hook-form";
 import styles from "./style";
 
-const TotalSalesCard = ({ title, dashboardData }) => {
+const TotalSalesCardTwo = ({
+   title,
+   dashboardData,
+   dashboardData2,
+}) => {
    const [activeButton, setActiveButton] = useState("month");
 
-   console.log({ dashboardData });
+   console.log({ dashboardData, dashboardData2 });
 
    const monthDays =
       dashboardData?.map((item, index) => index + 1) || [];
    const monthDaysDates =
       dashboardData?.map((item) => item?.day) || [];
    const monthData = dashboardData?.map((item) => item?.total) || [];
+   const monthData2 =
+      dashboardData2?.map((item) => item?.total) || [];
 
    const labels = monthDays || [];
    const labelsDates = monthDaysDates || [];
-
-   // const labels = monthDays?.map((_, index) => index + 1);
-
-   console.log({ labels });
 
    const apexData = {
       series: [
          {
             name: "Revenue",
             data: monthData || [],
+         },
+         {
+            name: "Net Profit",
+            data: monthData2 || [],
          },
       ],
       options: {
@@ -54,10 +60,10 @@ const TotalSalesCard = ({ title, dashboardData }) => {
          stroke: {
             curve: "smooth",
             width: 3,
-            colors: ["#5C67F5"],
+            colors: ["#5C67F5", "#50a8eb"], // Different colors for each series
          },
          fill: {
-            colors: ["#5C67F5"],
+            colors: ["#5C67F5", "#50a8eb"],
             opacity: 0.9,
             type: "solid",
             gradient: {
@@ -72,29 +78,26 @@ const TotalSalesCard = ({ title, dashboardData }) => {
                colorStops: [],
             },
          },
-
-         colors: ["#5C67F5"],
+         colors: ["#5C67F5", "#50a8eb"], // Different colors for each series
          markers: {
             size: 0,
             colors: ["#fff"],
-            strokeColors: "#5C67F5",
+            strokeColors: ["#5C67F5", "#50a8eb"],
          },
          grid: {
             strokeDashArray: 7,
-
             row: {
                colors: ["transparent"],
                opacity: 0.5,
             },
             yaxis: {
                lines: {
-                  show: true, // Hides the y-axis lines
-                  // strokeDashArray: 10,
+                  show: true,
                },
             },
             xaxis: {
                lines: {
-                  show: false, // Show vertical lines next to x-axis labels
+                  show: false,
                },
             },
          },
@@ -156,31 +159,9 @@ const TotalSalesCard = ({ title, dashboardData }) => {
                <Typography className="titleHeader">
                   {title}
                </Typography>
-               {/* <Typography className="amount">
-                  Rs. {returnNepaliNumberWithCommas(totalSales || 0)}
-               </Typography> */}
             </Box>
             <Box>
-               {/* <Button
-                  className={
-                     activeButton === "week"
-                        ? "buttonActiveLeft"
-                        : "buttonInactiveLeft"
-                  }
-                  onClick={() => handleButtonClick("week")}
-               >
-                  Week
-               </Button> */}
-               {/* <Button
-                  className={
-                     activeButton === "month"
-                        ? "buttonActiveRight"
-                        : "buttonInactiveRight"
-                  }
-                  onClick={() => handleButtonClick("month")}
-               >
-                  Month
-               </Button> */}
+               {/* Buttons for Week/Month can be added here */}
             </Box>
          </Box>
 
@@ -195,4 +176,4 @@ const TotalSalesCard = ({ title, dashboardData }) => {
    );
 };
 
-export default TotalSalesCard;
+export default TotalSalesCardTwo;

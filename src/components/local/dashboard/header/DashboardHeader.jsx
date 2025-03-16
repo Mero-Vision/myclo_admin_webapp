@@ -1,12 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 
+import { useGetDashboardQuery } from "../../../../api/dashboardApi";
 import {
    generateGreetings,
    getSiteDetail,
 } from "../../../../utils/helpers";
+import TotalSalesCardTwo from "./ChertTwo";
+import DashboardLeftGridOne from "./DashboardLeft";
 
-const DashboardHeader = ({ dashboardData }) => {
+const DashboardHeader = () => {
    const dummyDashboardData = {
       sales_by_week: [
          { day_of_week: "Monday", total_sales: 12000 },
@@ -56,6 +59,12 @@ const DashboardHeader = ({ dashboardData }) => {
 
    const userData = getSiteDetail()?.userData;
 
+   const {
+      data: dashboardData,
+      isFetching,
+      isSuccess,
+   } = useGetDashboardQuery();
+
    return (
       <>
          <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -67,7 +76,7 @@ const DashboardHeader = ({ dashboardData }) => {
                   marginBottom: "2px",
                }}
             >
-               Good {generateGreetings()}, Hancie Phago
+               Good {generateGreetings()}, {userData?.name || ""}
                {/* {singleUserInfo?.data?.name || "User"}! */}
             </Typography>
             <Typography
@@ -81,71 +90,79 @@ const DashboardHeader = ({ dashboardData }) => {
                Here's what's happening with your account today.
             </Typography>
 
-            {/* <>
+            <>
+               <Grid
+                  container
+                  spacing={2}
+                  sx={{ marginBottom: "24px" }}
+               >
                   <Grid
-                     container
-                     spacing={2}
-                     sx={{ marginBottom: "30px" }}
+                     item
+                     xs={12}
+                     sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                     }}
                   >
-                     <Grid
-                        item
-                        xs={12}
-                        sx={{
-                           display: "flex",
-                           flexDirection: "column",
-                        }}
-                     >
-                        <DashboardLeftGridOne
-                           dashboardData={dashboard?.data}
-                        />
-                     </Grid>
+                     <DashboardLeftGridOne
+                        dashboardData={dashboardData?.data}
+                     />
                   </Grid>
+               </Grid>
+               <Grid
+                  container
+                  spacing={1}
+                  sx={{ marginBottom: "24px" }}
+               >
                   <Grid
-                     container
-                     spacing={2}
-                     sx={{ marginBottom: "30px" }}
+                     item
+                     xs={12}
+                     sm={12}
+                     md={6}
+                     lg={12}
+                     sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                     }}
                   >
-                     <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={8}
-                        sx={{
-                           display: "flex",
-                           flexDirection: "column",
-                        }}
-                     >
-                        <TotalSalesCard
-                           dashboardData={dashboard?.data}
-                        />{" "}
-                     </Grid>
-                     <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={4}
-                        sx={{
-                           display: "flex",
-                           flexDirection: "column",
-                        }}
-                     >
-                        <div
-                           style={{
-                              fontSize: "16px",
-                              fontWeight: "500",
-                              marginBottom: "10px",
-                           }}
-                        >
-                           Events Calendar
-                        </div>
-                        <Calendar eventData={events?.data} />
-
-                        <PastEvents />
-                     </Grid>
+                     <TotalSalesCardTwo
+                        title={
+                           "Total Revenue and Net Profit by month"
+                        }
+                        dashboardData={
+                           dashboardData?.data?.revenue_graph
+                        }
+                        dashboardData2={
+                           dashboardData?.data?.net_profit_graph_data
+                        }
+                     />
                   </Grid>
-               </> */}
+               </Grid>
+               {/* <Grid
+                  container
+                  spacing={2}
+                  sx={{ marginBottom: "24px" }}
+               >
+                  <Grid
+                     item
+                     xs={12}
+                     sm={12}
+                     md={6}
+                     lg={12}
+                     sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                     }}
+                  >
+                     <TotalSalesCard
+                        title={"Total Net Profit by month"}
+                        dashboardData={
+                           dashboardData?.data?.net_profit_graph_data
+                        }
+                     />
+                  </Grid>
+               </Grid> */}
+            </>
          </Box>
       </>
    );
