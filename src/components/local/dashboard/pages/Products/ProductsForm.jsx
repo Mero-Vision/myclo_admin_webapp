@@ -70,8 +70,9 @@ const ProductsForm = ({ row, handleClose, uuid, inputValue }) => {
       const formData = new FormData();
 
       // Ensure boolean fields are properly formatted as 1 or 0
-      data.allow_negative_stock =
-         data.allow_negative_stock === true ? 1 : 0;
+      data.allow_negative_stock = Boolean(data.allow_negative_stock)
+         ? 1
+         : 0;
       data.has_varient = Boolean(data.has_varient) ? 1 : 0;
 
       // Append non-file fields to FormData

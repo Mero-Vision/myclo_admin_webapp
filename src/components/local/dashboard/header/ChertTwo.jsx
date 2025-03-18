@@ -167,6 +167,7 @@ const TotalSalesCardTwo = ({
 
          <Box>
             <ReactApexChart
+               height={400}
                type="line"
                options={apexData?.options}
                series={apexData?.series}

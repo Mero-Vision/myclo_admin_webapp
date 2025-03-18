@@ -1,6 +1,6 @@
-import { Add, Delete, Edit } from "@mui/icons-material";
+import { Delete, Edit } from "@mui/icons-material";
 import PeopleIcon from "@mui/icons-material/People";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -15,7 +15,6 @@ import AllModals from "../../../../common/AllModals/AllModals";
 import CustomDataGrid from "../../../../common/CustomDataGrid/CustomDataGrid";
 import CustomLoaderLin from "../../../../common/CustomLoader/CustomLoaderLin";
 import CustomDeleteModal from "../../../../common/CustomModal/CustomDeleteModal";
-import CustomMoreOptionButton from "../../../../common/CustomMoreOptionButton/CustomMoreOptionButton";
 
 const items = [
    {
@@ -89,24 +88,24 @@ const Products = () => {
    }, [isDeleteSuccess]);
    const { value, Tabs } = useTabs({
       data,
-      button: (
-         <Button
-            variant="contained"
-            startIcon={<Add />}
-            onClick={() => handleOpen("add_products")}
-            sx={{
-               fontSize: "12px",
-               textTransform: "capitalize",
-               backgroundColor: "#746be3",
-               borderRadius: "8px",
-               "&:hover": {
-                  backgroundColor: "#6259CA",
-               },
-            }}
-         >
-            Add New
-         </Button>
-      ),
+      // button: (
+      //    <Button
+      //       variant="contained"
+      //       startIcon={<Add />}
+      //       onClick={() => handleOpen("add_products")}
+      //       sx={{
+      //          fontSize: "12px",
+      //          textTransform: "capitalize",
+      //          backgroundColor: "#746be3",
+      //          borderRadius: "8px",
+      //          "&:hover": {
+      //             backgroundColor: "#6259CA",
+      //          },
+      //       }}
+      //    >
+      //       Add New
+      //    </Button>
+      // ),
    });
 
    const columns = [
@@ -198,22 +197,22 @@ const Products = () => {
          },
       },
 
-      {
-         flex: 0.3,
-         field: "action",
-         headerName: "Actions",
-         //  renderCell: ActionComponent,
-         renderCell: (params) => (
-            <>
-               {console.log({ params })}
-               <CustomMoreOptionButton
-                  items={items}
-                  handleOpenModal={handleOpen}
-                  row={params?.row}
-               />
-            </>
-         ),
-      },
+      // {
+      //    flex: 0.3,
+      //    field: "action",
+      //    headerName: "Actions",
+      //    //  renderCell: ActionComponent,
+      //    renderCell: (params) => (
+      //       <>
+      //          {console.log({ params })}
+      //          <CustomMoreOptionButton
+      //             items={items}
+      //             handleOpenModal={handleOpen}
+      //             row={params?.row}
+      //          />
+      //       </>
+      //    ),
+      // },
    ];
 
    const handleButtonClick = () => {

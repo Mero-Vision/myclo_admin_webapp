@@ -3,7 +3,9 @@ import NotFound from "../components/common/404";
 import Dashboard from "../components/local/dashboard/Dashboard";
 import Brand from "../components/local/dashboard/pages/Brand/Brand";
 import Category from "../components/local/dashboard/pages/Category/Category";
+import Customers from "../components/local/dashboard/pages/Customers/Customers";
 import DeliveryCharges from "../components/local/dashboard/pages/DeliveryCharges/DeliveryCharges";
+import Orders from "../components/local/dashboard/pages/Orders/Orders";
 import Products from "../components/local/dashboard/pages/Products/Products";
 import Settings from "../components/local/dashboard/pages/settings/Settings";
 import StoreSiteSettings from "../components/local/dashboard/pages/settings/storeSiteSettings/StoreSiteSettings";
@@ -22,9 +24,11 @@ const SiteRoutes = () => {
          </Route>
          <Route element={<MainDashboardLayout />}>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/Categories" element={<Category />} />
+            <Route path="/categories" element={<Category />} />
             <Route path="/brands" element={<Brand />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/customers" element={<Customers />} />
             <Route
                path="/delivery-charges"
                element={<DeliveryCharges />}

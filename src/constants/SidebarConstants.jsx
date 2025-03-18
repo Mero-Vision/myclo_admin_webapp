@@ -1,7 +1,11 @@
 import BrandingWatermarkOutlinedIcon from "@mui/icons-material/BrandingWatermarkOutlined";
+import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
+import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import MenuBookOutlinedIcon from "@mui/icons-material/MenuBookOutlined";
+import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
+
 export const SidebarConstants = [
    {
       header: "Main",
@@ -25,20 +29,37 @@ export const SidebarConstants = [
          },
          {
             label: "Categories",
-            url: "/Categories",
-            icon: <MenuBookOutlinedIcon />,
-            activeIcon: <MenuBookOutlinedIcon />,
+            url: "/categories",
+            icon: <CategoryOutlinedIcon />,
+            activeIcon: <CategoryOutlinedIcon />,
             permission: "customer-list",
             children: [],
          },
-         // {
-         //    label: "Products",
-         //    url: "/products",
-         //    icon: <MenuBookOutlinedIcon />,
-         //    activeIcon: <MenuBookOutlinedIcon />,
-         //    permission: "customer-list",
-         //    children: [],
-         // },
+         {
+            label: "Products",
+            url: "/products",
+            icon: <DashboardOutlinedIcon />,
+            activeIcon: <DashboardOutlinedIcon />,
+            permission: "customer-list",
+            children: [],
+         },
+         {
+            label: "Orders",
+            url: "/orders",
+            icon: <WidgetsOutlinedIcon />,
+            activeIcon: <WidgetsOutlinedIcon />,
+            permission: "customer-list",
+            children: [],
+         },
+         {
+            label: "Customers",
+            url: "/customers",
+            icon: <PeopleOutlinedIcon />,
+            activeIcon: <PeopleOutlinedIcon />,
+            permission: "customer-list",
+            children: [],
+         },
+
          // {
          //    label: "Delivery Charges",
          //    url: "/delivery-charges",
